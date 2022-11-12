@@ -11,6 +11,9 @@ const { uploadFile, getFileStream } = require('./s3')
 
 const app = express()
 
+app.get('/', (req, res) => {
+  res.send('Wroking!')
+})
 app.get('/images/:key', (req, res) => {
   const key = req.params.key
   const readStream = getFileStream(key)
