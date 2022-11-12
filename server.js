@@ -12,7 +12,6 @@ const { uploadFile, getFileStream } = require('./s3')
 const app = express()
 
 app.get('/images/:key', (req, res) => {
-  console.log(req.params)
   const key = req.params.key
   const readStream = getFileStream(key)
   readStream.pipe(res)
@@ -22,8 +21,6 @@ app.post('/images', upload.single('image'), async (req, res) => {
   const file = req.file
   const result = await uploadFile(file)
   await unlinkFile(file.path)
-  console.log(result)
-  const description = req.body.description
   res.send({ imagePath: `/images/${result.Key}` })
 })
 
