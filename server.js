@@ -13,7 +13,7 @@ const app = express()
 
 app.get('/', (req, res) => {
   res.send(
-    '<h1>Auto Scaling Demo App</h1> <h4>Message: Success</h4> <p>Version: 1.0.0</p>'
+    '<h1>Running Server</h1> <h4>Message: Success</h4> <p>Version: 1.0.0</p>'
   )
 })
 app.get('/images/:key', (req, res) => {
