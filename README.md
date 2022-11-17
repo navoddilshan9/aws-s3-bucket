@@ -4,7 +4,7 @@
 -> serverless-lambda </br>
 -> aws-s3-bucket repositories are under the simple blog publication project. 
 
-So in this project, mainly focus about the usage of AWS services. I used, 
+So in this project, mainly focus about the usage of AWS services and microservice architechture. I used, 
 
 01) AWS route 53
 02) AWS s3 bucket
